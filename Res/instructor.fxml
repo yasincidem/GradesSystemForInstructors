@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.InstructorController">
+   <children>
+
+      <Label layoutX="23.0" layoutY="31.0" text="Course ID" />
+      <Label layoutX="23.0" layoutY="79.0" text="Course Name" />
+      <Label layoutX="23.0" layoutY="127.0" text="Quota" />
+
+      <TextField fx:id="courseIDTextField" layoutX="112.0" layoutY="27.0" promptText="Course ID" />
+      <TextField fx:id="courseNameTextField" layoutX="112.0" layoutY="75.0" promptText="Course Name" />
+      <TextField fx:id="quotaTextField" layoutX="112.0" layoutY="123.0" promptText="Quota" />
+
+      <Button layoutX="186.0" layoutY="162.0" mnemonicParsing="false" onAction="#addCourse" text="Add Course" />
+
+
+       <TableView fx:id="tableViewCourse" layoutX="11.0" layoutY="205.0" prefHeight="180.0" prefWidth="680.0">
+           <columns>
+               <TableColumn fx:id="idColumnCourse" prefWidth="170.0" text="Course ID" />
+               <TableColumn fx:id="nameColumnCourse" prefWidth="307.0" text="Course Name" />
+               <TableColumn fx:id="quotaColumnCourse" prefWidth="202.0" text="Quota" />
+           </columns>
+       </TableView>
+
+       <TableView fx:id="tableViewStudent" layoutX="11.0" layoutY="397.0" prefHeight="180.0" prefWidth="680.0">
+           <columns>
+               <TableColumn fx:id="idColumnStudent" prefWidth="170.0" text="Student ID" />
+               <TableColumn fx:id="nameColumnStudent" prefWidth="170.0" text="Name" />
+               <TableColumn fx:id="surnameColumnStudent" prefWidth="170.0" text="Surname" />
+               <TableColumn fx:id="gradeColumnStudent" prefWidth="170.0" text="Grade" />
+           </columns>
+       </TableView>
+      <Label layoutX="406.0" layoutY="31.0" text="Select a student and enter grade" />
+      <TextField layoutX="406.0" layoutY="63.0" promptText="Grade" fx:id="gradeTextField"/>
+      <Button layoutX="566.0" layoutY="63.0" mnemonicParsing="false" text="Enter" onAction="#enterGrade" />
+
+
+       <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#goLogin">
+           <image>
+               <Image url="@../Images/back.png" />
+           </image>
+       </ImageView>
+   </children>
+</AnchorPane>
